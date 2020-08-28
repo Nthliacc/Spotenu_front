@@ -1,19 +1,23 @@
 import React from "react";
-import { LoginContainer } from "./styled";
 import Button from "@material-ui/core/Button";
 import { TextField } from "@material-ui/core";
+import { InputBox, Title } from "../SignupPage/styled";
+import { useHistory } from "react-router-dom";
 
-function Login() {
+export const Login = () => {
+  const history = useHistory();
+  const goToSignupPage = () => {
+    history.push("/signup")
+  };
   return (
-    <LoginContainer>
-      <h2>Login</h2>
+    <InputBox>
+      <Title>Login</Title>
       <TextField label="Nickname / Email" variant="outlined" />
       <TextField label="Password" variant="outlined" />
       <Button variant="contained" color="primary">
         Entrar
       </Button>
-    </LoginContainer>
+      <Button size="small" onClick={goToSignupPage}>Ainda não possuo cadastro</Button>
+    </InputBox>
   );
-}
-
-export default Login;
+};

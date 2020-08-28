@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import { Link } from 'react-router-dom';
-import { Container, InputBox, Title } from "./styled";
+import { InputBox, Title } from "./styled";
 import {TextField, MenuItem, Button } from "@material-ui/core";
 import { useHistory } from "react-router-dom";
 
-function Signup() {
+export const Signup = () => {
   const history = useHistory();
   const goToLoginPage = () => {
     history.push("/login")
@@ -17,7 +16,6 @@ function Signup() {
   };
 
   return (
-    <Container>
       <InputBox>
         <Title>Cadastre-se</Title>
         <TextField label="Nome" variant="outlined" />
@@ -32,10 +30,7 @@ function Signup() {
         <Button variant="contained" color="primary">
         Cadastrar
         </Button>
-        <button as={Link}  onClick={goToLoginPage}>Já possuo cadastro</button>
+        <Button size="small" onClick={goToLoginPage}>Já possuo cadastro</Button>
       </InputBox>
-    </Container>
   );
-}
-
-export default Signup;
+};

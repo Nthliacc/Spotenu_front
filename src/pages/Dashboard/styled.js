@@ -4,7 +4,7 @@ export const Title = styled.h1`
     text-align: center;
     color: black;
 `;
-export const InputBox = styled.div`
+export const Container = styled.div`
     margin: 8px;
     padding: 12%;
     display: flex;

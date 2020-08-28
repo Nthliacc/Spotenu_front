@@ -1,10 +1,11 @@
 import React from "react";
 import { Switch, Route, BrowserRouter } from "react-router-dom";
-import Login from "../../pages/LoginPage/login";
-import Signup from "../../pages/SignupPage/signup";
+import {Login} from "../../pages/LoginPage/login";
+import {Signup} from "../../pages/SignupPage/signup";
+import { DashboardPage } from "../../pages/Dashboard";
 
 
-const Router = () => {
+export const Router = () => {
   return (
     <BrowserRouter key={Router}>
       <Switch>
@@ -14,6 +15,9 @@ const Router = () => {
         <Route exact path="/signup">
           <Signup />
         </Route>
+        <Route exact path="/dashboard">
+          <DashboardPage />
+        </Route>
         <Route path="/">
           Error 404!!
         </Route>
@@ -21,5 +25,3 @@ const Router = () => {
     </BrowserRouter>
   );
 };
-
-export default Router;
