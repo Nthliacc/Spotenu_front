@@ -1,15 +1,21 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
-import { Container } from "./styled";
+import { DashboardContainer, Container } from "./styled";
+import { Nav } from "./Nav/Nav";
+import { Bands } from "./Bands";
 
 export const DashboardPage = () => {
-    const history = useHistory();
-    const goToLoginPage = () => {
-        history.push("/login")
-    };
+
     return (
-        <Container>
-            HomePAGE
-        </Container>
+        <DashboardContainer>
+            <Nav />        
+            <Container>
+                <Bands />
+                <Bands />
+                <Bands />
+                <Bands />
+                <Bands />
+                <Bands />
+            </Container>
+        </DashboardContainer>
     );
 };

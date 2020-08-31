@@ -3,6 +3,7 @@ import { Switch, Route, BrowserRouter } from "react-router-dom";
 import {Login} from "../../pages/LoginPage/login";
 import {Signup} from "../../pages/SignupPage/signup";
 import { DashboardPage } from "../../pages/Dashboard";
+import { ApproveBand } from "../../pages/Dashboard/Admin/ApproveBand";
 
 
 export const Router = () => {
@@ -17,6 +18,9 @@ export const Router = () => {
         </Route>
         <Route exact path="/dashboard">
           <DashboardPage />
+        </Route>
+        <Route exact path="/approved">
+          <ApproveBand />
         </Route>
         <Route path="/">
           Error 404!!
