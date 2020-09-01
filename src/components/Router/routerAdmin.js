@@ -1,24 +1,18 @@
 import React from "react";
 import { Switch, Route, BrowserRouter } from "react-router-dom";
-import { LoginPage } from "../../pages/LoginPage";
-import { SignupPage } from "../../pages/SignupPage";
-import { DashboardPage } from "../../pages/Dashboard";
 import { ApproveBand } from "../../pages/Dashboard/Admin/ApproveBand";
 import { AddAdmin } from "../../pages/Dashboard/Admin/AddAdmin";
+import { Nav } from "../../pages/Dashboard/Nav/Nav";
+import { Main } from "../../pages/Dashboard/Main";
 
 
-export const Router = () => {
+export const RouterAdmin = () => {
   return (
-    <BrowserRouter key={Router}>
+    <BrowserRouter key={RouterAdmin}>
+      <Nav />
       <Switch>
-        <Route exact path="/login">
-          <LoginPage title={"Login"} button={"Entrar"}/>
-        </Route>
-        <Route exact path="/signup">
-          <SignupPage title={"Cadastre-se"}/>
-        </Route>
         <Route exact path="/dashboard">
-          <DashboardPage />
+          <Main />
         </Route>
         <Route exact path="/approved">
           <ApproveBand />

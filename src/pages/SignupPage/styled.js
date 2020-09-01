@@ -1,25 +1,25 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
-    border: 1px solid black;
+export const Page = styled.div`
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    padding-left: 30%;
+    justify-content: center;
 `;
-export const Title = styled.h2`
+export const Title = styled.h1`
+    text-align: center;
     color: black;
 `;
 export const InputBox = styled.div`
-
-`;
-export const Box = styled.div`
-    width: 50%;
-    min-height: 90vh;
-    padding: 2%;
+    margin: 8px;
+    padding: 12%;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    justify-items: start;
+    align-content: center;
+    gap: 6px;
+    border-radius: 12px;
+    background-color: whitesmoke;
+    button {
+        opacity: 1;
+    };
 `;
