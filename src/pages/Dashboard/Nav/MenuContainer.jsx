@@ -16,14 +16,21 @@ export const MenuContainer = (props) => {
   const handleClose = () => {
     setAnchorEl(null);
   };
+  const goToProfile = () => {
+    history.push("/dashboard");
+    setAnchorEl(null);
+  };
   const goOut = () => {
-    history.push("/login")
+    history.push("/login");
+    setAnchorEl(null);
   };
   const approvedBand = () => {
-    history.push("/approved")
+    history.push("/approved");
+    setAnchorEl(null);
   };
   const addAdmin = () => {
-    history.push("/add-admin")
+    history.push("/add-admin");
+    setAnchorEl(null);
   };
 
   return (
@@ -44,7 +51,7 @@ export const MenuContainer = (props) => {
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
-        <MenuItem onClick={handleClose}>Profile</MenuItem>
+        <MenuItem onClick={goToProfile}>Profile</MenuItem>
         <MenuItem onClick={approvedBand}>Solicitações</MenuItem>
         <MenuItem onClick={addAdmin}>Cadastrar Admin</MenuItem>
         <MenuItem onClick={goOut}>Logout</MenuItem>
