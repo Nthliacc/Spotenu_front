@@ -22,6 +22,9 @@ export const MenuContainer = (props) => {
   const approvedBand = () => {
     history.push("/approved")
   };
+  const addAdmin = () => {
+    history.push("/add-admin")
+  };
 
   return (
     <div>
@@ -43,7 +46,7 @@ export const MenuContainer = (props) => {
       >
         <MenuItem onClick={handleClose}>Profile</MenuItem>
         <MenuItem onClick={approvedBand}>Solicitações</MenuItem>
-        <MenuItem onClick={handleClose}>Cadastrar Admin</MenuItem>
+        <MenuItem onClick={addAdmin}>Cadastrar Admin</MenuItem>
         <MenuItem onClick={goOut}>Logout</MenuItem>
       </Menu>
     </div>

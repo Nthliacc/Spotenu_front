@@ -6,6 +6,10 @@ export const Container = styled.div`
     gap: 12px;
     width: 90%;
     padding: 12px;
+    h1{
+        text-align: center;
+        color: white;
+    };
 `;
 export const Blocks = styled.div`
     display: flex;
@@ -16,5 +20,5 @@ export const Blocks = styled.div`
     background-color: whitesmoke;
     p{
         margin-right: 36px;
-    }
+    };
 `;

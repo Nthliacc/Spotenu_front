@@ -1,5 +1,11 @@
 import styled from 'styled-components';
 
+export const Page = styled.div`
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+`;
 export const Title = styled.h1`
     text-align: center;
     color: black;
@@ -10,9 +16,9 @@ export const InputBox = styled.div`
     display: flex;
     flex-direction: column;
     align-content: center;
-    border-radius: 15px;
+    gap: 6px;
+    border-radius: 12px;
     background-color: whitesmoke;
-    opacity: 0.9;
     button {
         opacity: 1;
     };
